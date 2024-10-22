@@ -25,10 +25,68 @@ header > a{
     justify-items: stretch;
     align-items: stretch;
     justify-content: space-evenly;
+    padding: 3%;
     
  }
 
  .gallery img{
     border: 5px dashed black;
     width: auto;
+ }
+
+ @media screen and (min-width: 600px){
+
+.gallery{
+    background-color: purple;
+    gap: 8px;
+    justify-items: stretch;
+    align-items: normal; 
+    
+}
+.gallery :nth-child(4){
+    grid-column: 1/-1;
+}
+
+.gallery :nth-child(8){
+    grid-column: 1/-1;
+}
+
+.gallery :nth-of-type(even){
+    border: 5px dashed white;
+}
+
+ }
+
+ @media screen and (min-width: 825px){
+    .gallery{
+        background-color: white;
+        grid-template-columns: 21% 21% 21% 21% ;
+        
+    }
+
+    #main img{
+        border: 5px solid orange ;
+    }
+
+    img{
+        align-self: center;
+        
+    }
+ }
+
+ @media screen and (min-width: 900px){
+    .gallery{
+        background-color: black;
+    }
+    #main img{
+        grid-column: span 2;
+    }
+
+    #main img:nth-of-type(3){
+        grid-column: 2/4
+    }
+    #main img:nth-of-type(6){
+        grid-column: 2/4;
+    
+    }
  }
